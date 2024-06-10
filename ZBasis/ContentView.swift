@@ -7,18 +7,30 @@
 
 import SwiftUI
 
+import SwiftUI
+
 struct ContentView: View {
+    
+    //: MARK: - PROPERTIES
+    @AppStorage("displayWelcomeScreen") var displayWelcomeScreen: Bool = true
+    
+    //: MARK: - BODY
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
+        
+        if displayWelcomeScreen {
+            WelcomeView()
+        } else {
             Text("Hello, world!")
+                .padding()
         }
-        .padding()
+        
     }
 }
 
-#Preview {
-    ContentView()
+
+//: MARK: - PREVIEW
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
 }
