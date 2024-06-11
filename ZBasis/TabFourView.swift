@@ -23,6 +23,11 @@ struct TabFourView: View {
     var body: some View {
         
         Form {
+            Text("System Settings")
+                .font(.title)
+                .fontWeight(.heavy)
+                .multilineTextAlignment(.center)
+                .padding(.top, 10)
             Section("System Options") {
                 
                 Picker("System", selection: $sys){

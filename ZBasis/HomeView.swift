@@ -12,14 +12,9 @@ struct HomeView: View {
         
         TabView {
             
-            TabOneView().tabItem {
+            TabTwoView().tabItem {
                 Image(systemName: "house.fill")
                 Text("Home")
-            }
-            
-            TabTwoView().tabItem {
-                Image(systemName: "t.square.fill")
-                Text("T-Codes")
             }
             
             TabThreeView().tabItem {
